@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+  font-family: 'Great Vibes', cursive;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 0;
+}
+
+.center {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 5rem;
+  color: white;
+  text-shadow: 0 0 20px #ff69b4;
+  animation: glow 2s ease-in-out infinite;
+  margin-bottom: 30px;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.show {
+  opacity: 1;
+}
+
+h1 .heart {
+  color: red;
+  animation: beat 1s infinite;
+}
+
+button {
+  font-size: 1.5rem;
+  padding: 12px 35px;
+  border: none;
+  border-radius: 30px;
+  background: #ff69b4;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ff69b4;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #ff69b4; }
+  50% { text-shadow: 0 0 30px #ff69b4; }
+  100% { text-shadow: 0 0 10px #ff69b4; }
+}
